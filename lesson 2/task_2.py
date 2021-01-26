@@ -16,9 +16,6 @@ while True:
 
 for i in range(len(user_list)):
     if i % 2 == 0 and i != len(user_list) - 1:
-        item_1 = user_list[i]
-        item_2 = user_list[i + 1]
-        user_list[i] = item_2
-        user_list[i + 1] = item_1
+        user_list[i], user_list[i+1] = user_list[i+1], user_list[i]
 
 print(user_list)

@@ -8,16 +8,19 @@
 # Пользователь ввёл число 1. Результат: 7, 5, 3, 3, 2, 1.
 # Набор натуральных чисел можно задать сразу в коде, например, my_list = [7, 5, 3, 3, 2].
 
-numbers = [7, 6, 5, 4, 1]
+numbers = [7, 6, 5, 5, 4, 1, 1]
 
 user_input = int(input('Введите число:\n'))
 
 if user_input > numbers[0]:
     numbers.insert(0, user_input)
 else:
+    counter_position = len(numbers)
     for number in reversed(numbers):
         if user_input <= number:
-            numbers.insert(numbers.index(number) + 1, user_input)
             break
+        else:
+            counter_position -= 1
+    numbers.insert(counter_position, user_input)
 
 print(numbers)

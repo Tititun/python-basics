@@ -3,7 +3,5 @@
 
 user_input = input('Введите несколько слов, разделенных пробелами:\n').split(' ')
 
-counter = 1
-for word in user_input:
+for counter, word in enumerate(user_input):
     print(f'{counter}. {word[:10]}')
-    counter += 1
