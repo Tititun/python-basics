@@ -11,7 +11,7 @@ special_symbol = False
 
 while not special_symbol:
     user_input = input('Введите строку чисел, разделенных пробелом:\n')
-    numbers = user_input.split(' ')
+    numbers = user_input.split()
     for number in numbers:
         try:
             total += float(number)
